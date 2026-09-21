@@ -1,0 +1,19 @@
+{
+  "name": "chatbot-ia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chatbot conversacional con OpenAI Responses API",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/gemini.test.js tests/catalog.test.js tests/customer-policy.test.js",
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test:integration": "node --env-file=.env --test tests/database.integration.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "mysql2": "^3.24.4"
+  }
+}
