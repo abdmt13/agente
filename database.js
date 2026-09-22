@@ -6,7 +6,7 @@ export async function connectDatabase() {
     port: Number(process.env.DB_PORT || 3306),
     user: process.env.DB_USER || "root",
     password: process.env.DB_PASSWORD || "",
-    database: process.env.DB_NAME || "agentevirtualmvp",
+    database: process.env.DB_NAME || "inmobiliaria_mvp",
     charset: "utf8mb4",
     connectionLimit: 5,
     connectTimeout: 5000

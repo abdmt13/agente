@@ -62,6 +62,8 @@ async def register(
     mediator: Mediator = Depends(get_mediator),
 ) -> Dict[str, Any]:
     """Controlador que solo despacha al Mediator."""
+    if dto.role != "customer":
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="El registro público solo permite cuentas de cliente.")
     try:
         command = RegisterUserCommand(
             email=dto.email,
