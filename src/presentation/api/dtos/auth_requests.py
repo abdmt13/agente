@@ -4,7 +4,7 @@ from pydantic import BaseModel, EmailStr, Field
 
 # Pydantic Schemas
 class LoginBody(BaseModel):
-    email: EmailStr = Field(..., description="Correo electrónico del usuario")
+    email: str = Field(..., min_length=3, pattern=r"^[^@\s]+@[^@\s]+\.[^@\s]+$", description="Correo electrónico del usuario")
     password: str = Field(..., min_length=6, description="Contraseña")
 
 

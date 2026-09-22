@@ -13,7 +13,7 @@ Para atención al cliente se usa `GEMINI_THINKING_LEVEL=minimal` y un máximo de
 ## Requisitos de ejecución
 
 - Node.js 20 o superior.
-- MySQL en ejecución y una base de datos existente (`agentevirtualmvp`).
+- MySQL en ejecución y una base de datos existente (`inmobiliaria_mvp`).
 - Una API key del proveedor seleccionado para activar la IA. Sin ella, la aplicación funciona en modo demostración.
 
 ## Ejecutar
@@ -32,11 +32,18 @@ npm start
 
 7. Abre <http://localhost:3000>.
 
+## Panel de captura del personal (FastAPI)
+
+La interfaz pública del chat está en `/`. El panel interno está en `/personal` cuando ejecutas la aplicación FastAPI con `python -m uvicorn src.presentation.main:app --reload --port 8000`; abre <http://localhost:8000/personal>. El panel permite crear y editar desarrollos, propiedades y preguntas frecuentes, y requiere una cuenta existente con rol `agent` o `admin`. La ruta `/api/v1/staff/catalog` y todas las escrituras de `/api/v1/staff/*` validan el token y el rol en el servidor. Los registros de propiedades disponibles en desarrollos activos y las preguntas frecuentes activas forman parte del contexto del chat de FastAPI.
+
+El servidor Node (`npm start`, puerto 3000) conserva el chat público anterior; no ofrece las rutas de captura. Usa FastAPI para operar el panel y la API nueva. El registro público de FastAPI solo crea cuentas `customer`; las cuentas del personal deben aprovisionarse mediante un proceso administrativo confiable. El panel no permite cambiar roles ni borrar registros: desactiva desarrollos y preguntas frecuentes o cambia la disponibilidad de una propiedad desde el formulario.
+
+
 El proyecto utiliza `mysql2` para conectarse a MySQL desde el servidor. Las credenciales permanecen en `.env`, que está excluido de Git.
 
 ## Base de datos de la demo
 
-La configuración local usa el servidor `127.0.0.2`, puerto `3306`, usuario `root` y base `agentevirtualmvp`. `127.0.0.2` es una dirección IP, no un puerto. Coloca la contraseña en `DB_PASSWORD`; no la agregues al código ni a `.env.example`.
+La configuración local usa el servidor `127.0.0.2`, puerto `3306`, usuario `root` y base `inmobiliaria_mvp`. `127.0.0.2` es una dirección IP, no un puerto. Coloca la contraseña en `DB_PASSWORD`; no la agregues al código ni a `.env.example`.
 
 Al iniciar, el servidor crea las tablas `chatbot_conversations` y `chatbot_messages` si no existen. El usuario de MySQL necesita permisos para crear tablas, consultar, insertar, actualizar y eliminar registros en esa base. No se crean ni modifican tablas del negocio.
 

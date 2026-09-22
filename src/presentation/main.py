@@ -4,6 +4,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+from fastapi.responses import JSONResponse
+from sqlalchemy.exc import OperationalError
 from src.infrastructure.ioc.container import Container
 from src.infrastructure.logging.logger import setup_logging
 from src.infrastructure.monitoring.prometheus import metrics_endpoint
@@ -56,6 +58,13 @@ def create_app() -> FastAPI:
     )
     app.state.container = container
 
+    @app.exception_handler(OperationalError)
+    async def database_unavailable(request, exc):
+        return JSONResponse(
+            status_code=503,
+            content={"detail": "No se pudo conectar a MySQL. Revisa DB_HOST, DB_USER y DB_PASSWORD en .env."},
+        )
+
     # CORS
     app.add_middleware(
         CORSMiddleware,
@@ -95,6 +104,17 @@ def create_app() -> FastAPI:
             if os.path.exists(index_path):
                 return FileResponse(index_path)
             return {"message": "Chatbot IA API en ejecución"}
+
+        @app.get("/personal", include_in_schema=False)
+        async def serve_staff():
+            return FileResponse(os.path.join(public_dir, "personal.html"))
+
+        @app.get("/{asset_name}", include_in_schema=False)
+        async def serve_public_asset(asset_name: str):
+            if asset_name not in {"app.js", "styles.css", "personal.js", "personal.css"}:
+                from fastapi import HTTPException
+                raise HTTPException(status_code=404)
+            return FileResponse(os.path.join(public_dir, asset_name))
 
     return app
 

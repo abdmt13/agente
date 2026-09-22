@@ -64,13 +64,13 @@ async def test_user_registration_and_login_flow(app_and_client):
         "email": "asesor@inmobiliaria.com",
         "password": "password123",
         "full_name": "Asesor Inmobiliario",
-        "role": "agent"
+        "role": "customer"
     }
     reg_resp = await client.post("/api/v1/auth/register", json=reg_payload)
     assert reg_resp.status_code == 201
     user_data = reg_resp.json()
     assert user_data["email"] == "asesor@inmobiliaria.com"
-    assert user_data["role"] == "agent"
+    assert user_data["role"] == "customer"
 
     # 2. Login
     login_payload = {
@@ -89,7 +89,12 @@ async def test_user_registration_and_login_flow(app_and_client):
     assert me_resp.status_code == 200
     me_data = me_resp.json()
     assert me_data["email"] == "asesor@inmobiliaria.com"
-    assert me_data["role"] == "agent"
+    assert me_data["role"] == "customer"
+
+    forbidden = await client.post("/api/v1/auth/register", json={**reg_payload, "email": "otro@inmobiliaria.com", "role": "agent"})
+    assert forbidden.status_code == 403
+    staff = await client.get("/api/v1/staff/catalog", headers=headers)
+    assert staff.status_code == 403
 
 
 @pytest.mark.asyncio

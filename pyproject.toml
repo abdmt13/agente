@@ -11,6 +11,7 @@ dependencies = [
     "pydantic-settings>=2.7.0",
     "sqlalchemy>=2.0.36",
     "asyncmy>=0.2.9",
+    "cryptography>=42.0.0",
     "aiomysql>=0.2.0",
     "dependency-injector>=4.45.0",
     "pyjwt>=2.10.0",
