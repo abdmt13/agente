@@ -1,0 +1,8 @@
+
+> chatbot-ia@1.0.0 start
+> node server.js
+
+Base de datos conectada.
+Chatbot disponible en http://localhost:3000
+Proveedor: gemini; modelo: gemini-3.8-flash
+Gemini solicitud: { model: 'gemini-3.8-flash', elapsedMs: 3711, status: 200 }

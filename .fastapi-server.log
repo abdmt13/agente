@@ -1,0 +1,4 @@
+2026-09-28T01:36:05.545757Z [info     ] Iniciando backend FastAPI con Clean Architecture y CQRS... [src.presentation.main]
+2026-09-28T01:36:05.676428Z [info     ] Base de datos y esquemas verificados con éxito. [src.presentation.main]
+2026-09-28T01:36:05.679298Z [info     ] Cerrando recursos del backend... [src.presentation.main]
+2026-09-28T01:36:05.680235Z [info     ] Backend detenido de forma segura. [src.presentation.main]

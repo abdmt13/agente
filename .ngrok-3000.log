@@ -1,0 +1,64 @@
+{"lvl":"info","msg":"no configuration paths supplied","t":"2026-09-27T19:46:10.1388898-06:00"}
+{"lvl":"info","msg":"using configuration at default config path","path":"C:\\Users\\USER\\AppData\\Local\\ngrok\\ngrok.yml","t":"2026-09-27T19:46:10.1561452-06:00"}
+{"err":"\u003cnil\u003e","lvl":"info","msg":"open config file","path":"C:\\Users\\USER\\AppData\\Local\\ngrok\\ngrok.yml","t":"2026-09-27T19:46:10.1561452-06:00"}
+{"enabled":false,"lvl":"info","msg":"FIPS 140 mode","t":"2026-09-27T19:46:10.1561452-06:00"}
+{"addr":"127.0.0.1:4040","allow_hosts":null,"lvl":"info","msg":"starting web service","obj":"web","t":"2026-09-27T19:46:10.1689419-06:00"}
+{"lvl":"info","msg":"client session established","obj":"tunnels.session","t":"2026-09-27T19:46:10.447841-06:00"}
+{"lvl":"info","msg":"tunnel session started","obj":"tunnels.session","t":"2026-09-27T19:46:10.447841-06:00"}
+{"addr":"http://localhost:3000","lvl":"info","msg":"started tunnel","name":"command_line","obj":"tunnels","t":"2026-09-27T19:46:10.6660854-06:00","url":"https://bootleg-subscript-giddily.ngrok-free.dev"}
+{"id":"2237b5378e6094e1","lvl":"info","msg":"start","pg":"/api/tunnels","t":"2026-09-27T19:46:15.1369782-06:00"}
+{"dur":"0s","id":"2237b5378e6094e1","lvl":"info","msg":"end","pg":"/api/tunnels","status":200,"t":"2026-09-27T19:46:15.1369782-06:00"}
+{"id":"8cfbfbccb95a4e95","lvl":"info","msg":"start","pg":"/api/tunnels","t":"2026-09-27T19:46:55.0005639-06:00"}
+{"addr":"http://localhost:8000","lvl":"info","msg":"started tunnel","name":"fastapi-8000","obj":"tunnels","t":"2026-09-27T19:46:55.1948442-06:00","url":"https://bootleg-subscript-giddily.ngrok-free.dev"}
+{"dur":"194.2803ms","id":"8cfbfbccb95a4e95","lvl":"info","msg":"end","pg":"/api/tunnels","status":201,"t":"2026-09-27T19:46:55.1948442-06:00"}
+{"id":"c0ab2414b2154e4a","lvl":"info","msg":"start","pg":"/api/tunnels","t":"2026-09-27T19:46:55.2571775-06:00"}
+{"dur":"0s","id":"c0ab2414b2154e4a","lvl":"info","msg":"end","pg":"/api/tunnels","status":200,"t":"2026-09-27T19:46:55.2571775-06:00"}
+{"id":"396ac9abb1f015e3","lvl":"info","msg":"start","pg":"/api/tunnels","t":"2026-09-27T19:48:32.077927-06:00"}
+{"dur":"44.2181ms","id":"396ac9abb1f015e3","lvl":"info","msg":"end","pg":"/api/tunnels","status":200,"t":"2026-09-27T19:48:32.1221451-06:00"}
+{"id":"b1689a0fa83d15ac","lvl":"info","msg":"start","pg":"/api/tunnels/command_line","t":"2026-09-27T19:48:32.1793281-06:00"}
+{"clientid":"c78ce5f7d31f1562d746b0e82e74133b","lvl":"info","msg":"failed to accept connection: Listener closed","obj":"tunnels.session","t":"2026-09-27T19:48:32.2808672-06:00"}
+{"acceptErr":"failed to accept connection: Listener closed","lvl":"warn","msg":"Stopping forwarder","name":"command_line","t":"2026-09-27T19:48:32.3820869-06:00"}
+{"dur":"101.5391ms","id":"b1689a0fa83d15ac","lvl":"info","msg":"end","pg":"/api/tunnels/command_line","status":204,"t":"2026-09-27T19:48:32.2808672-06:00"}
+{"error":"no tunnel found with requested name","lvl":"info","msg":"Error handling the forwarder accept error","t":"2026-09-27T19:48:32.3820869-06:00"}
+{"id":"33f08638305c5602","lvl":"info","msg":"start","pg":"/api/tunnels/fastapi-8000","t":"2026-09-27T19:48:32.3933771-06:00"}
+{"dur":"80.3057ms","id":"33f08638305c5602","lvl":"info","msg":"end","pg":"/api/tunnels/fastapi-8000","status":204,"t":"2026-09-27T19:48:32.4736828-06:00"}
+{"clientid":"8634e86c95d9000851b804a1d3b7705f","lvl":"info","msg":"failed to accept connection: Listener closed","obj":"tunnels.session","t":"2026-09-27T19:48:32.4736828-06:00"}
+{"acceptErr":"failed to accept connection: Listener closed","lvl":"warn","msg":"Stopping forwarder","name":"fastapi-8000","t":"2026-09-27T19:48:32.5455906-06:00"}
+{"error":"no tunnel found with requested name","lvl":"info","msg":"Error handling the forwarder accept error","t":"2026-09-27T19:48:32.5455906-06:00"}
+{"id":"5aa2340fea082b51","lvl":"info","msg":"start","pg":"/api/tunnels","t":"2026-09-27T19:48:32.5582982-06:00"}
+{"addr":"http://127.0.0.1:8080","lvl":"info","msg":"started tunnel","name":"dual-app","obj":"tunnels","t":"2026-09-27T19:48:32.7982888-06:00","url":"https://bootleg-subscript-giddily.ngrok-free.dev"}
+{"dur":"267.1118ms","id":"5aa2340fea082b51","lvl":"info","msg":"end","pg":"/api/tunnels","status":201,"t":"2026-09-27T19:48:32.82541-06:00"}
+{"id":"ed1933d54d22","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.23:7621","t":"2026-09-27T19:48:50.779088-06:00"}
+{"id":"5d4245a5d5d6","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.23:52557","t":"2026-09-27T19:48:51.0723383-06:00"}
+{"id":"d88ce32f96fc","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.23:52560","t":"2026-09-27T19:48:51.3366745-06:00"}
+{"id":"42ce7957272d","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.23:7623","t":"2026-09-27T19:48:51.6134015-06:00"}
+{"id":"e6c3c810dcfca2e9","lvl":"info","msg":"start","pg":"/api/tunnels","t":"2026-09-27T19:49:07.4559565-06:00"}
+{"dur":"0s","id":"e6c3c810dcfca2e9","lvl":"info","msg":"end","pg":"/api/tunnels","status":200,"t":"2026-09-27T19:49:07.4559565-06:00"}
+{"id":"1643f7b69ab3","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.18:63259","t":"2026-09-27T19:56:24.5151146-06:00"}
+{"id":"603ad9ce5eac","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.18:63259","t":"2026-09-27T19:56:24.724215-06:00"}
+{"id":"82f40b5731d8","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.18:63259","t":"2026-09-27T19:56:24.7263025-06:00"}
+{"id":"0674019ca499","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.18:63259","t":"2026-09-27T19:57:42.5615808-06:00"}
+{"id":"2746b35b39d6","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.18:63259","t":"2026-09-27T19:57:42.5615808-06:00"}
+{"id":"ff4264fee431","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.18:63259","t":"2026-09-27T19:57:42.5615808-06:00"}
+{"id":"e14c4a64f74e","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:50716","t":"2026-09-27T20:00:45.2672486-06:00"}
+{"id":"6285ceaddb53","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:50716","t":"2026-09-27T20:00:45.4415588-06:00"}
+{"id":"548033f22672","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:50716","t":"2026-09-27T20:00:45.4415588-06:00"}
+{"id":"97c244d8ac93","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:50716","t":"2026-09-27T20:01:16.3091753-06:00"}
+{"id":"2c8c4e9c8d5d","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:50716","t":"2026-09-27T20:02:17.1377027-06:00"}
+{"id":"f93cd9c45f01","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:50716","t":"2026-09-27T20:03:33.951349-06:00"}
+{"id":"d799c999e46a","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:50716","t":"2026-09-27T20:04:59.2920301-06:00"}
+{"id":"6956aa24c30c","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:50716","t":"2026-09-27T20:05:06.5021973-06:00"}
+{"id":"c1a6897dca54","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:50716","t":"2026-09-27T20:05:06.6548771-06:00"}
+{"id":"ca42e632b827","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:50716","t":"2026-09-27T20:06:04.2985245-06:00"}
+{"id":"7ae7f00c9019","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:50716","t":"2026-09-27T20:06:14.2304154-06:00"}
+{"id":"4950bf630a52","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.18:8357","t":"2026-09-27T20:15:23.3598596-06:00"}
+{"id":"d23186edc5d0","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.18:8389","t":"2026-09-27T20:15:59.7847035-06:00"}
+{"id":"37b3948713db","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:8437","t":"2026-09-27T20:17:20.4622056-06:00"}
+{"id":"1134bcbfca38","l":"127.0.0.1:8080","lvl":"info","msg":"join connections","obj":"join","r":"209.178.128.22:56751","t":"2026-09-27T20:18:05.244525-06:00"}
+{"clientid":"3002e19f6ee42b080679017be0ca1417","id":"13fbb53a787f","lvl":"eror","msg":"heartbeat timeout, terminating session","obj":"csess","t":"2026-09-27T21:07:20.5102341-06:00"}
+{"err":"session closed","id":"b289cf95660e","lvl":"eror","msg":"session closed, starting reconnect loop","obj":"csess","t":"2026-09-27T21:07:20.8168853-06:00"}
+{"err":"failed to dial ngrok server with address \"connect.ngrok-agent.com:443\": dial tcp: lookup connect.ngrok-agent.com: no such host","lvl":"eror","msg":"failed to reconnect session","obj":"tunnels.session","t":"2026-09-27T21:07:20.8196303-06:00"}
+{"err":"failed to dial ngrok server with address \"connect.ngrok-agent.com:443\": dial tcp: lookup connect.ngrok-agent.com: no such host","lvl":"eror","msg":"failed to reconnect session","obj":"tunnels.session","t":"2026-09-27T21:07:21.3198081-06:00"}
+{"err":"failed to dial ngrok server with address \"connect.ngrok-agent.com:443\": dial tcp: lookup connect.ngrok-agent.com: no such host","lvl":"eror","msg":"failed to reconnect session","obj":"tunnels.session","t":"2026-09-27T21:07:22.3202262-06:00"}
+{"lvl":"info","msg":"client session established","obj":"tunnels.session","t":"2026-09-27T21:07:24.775422-06:00"}
+{"lvl":"info","msg":"tunnel session started","obj":"tunnels.session","t":"2026-09-27T21:07:24.7759257-06:00"}
