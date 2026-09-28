@@ -1,30 +1,19 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panel del personal · Catálogo</title>
-  <link rel="stylesheet" href="/personal.css">
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>Administración inmobiliaria</title><link rel="stylesheet" href="/personal.css"><link rel="stylesheet" href="/transitions.css"></head>
 <body>
-  <header class="topbar"><strong>Panel del personal</strong><a href="/">Ver chat público ↗</a></header>
-  <main>
-    <section id="login-panel" class="card narrow">
-      <p class="eyebrow">Acceso interno</p><h1>Iniciar sesión</h1>
-      <p>Ingresa con una cuenta de agente o administrador.</p>
-      <form id="login-form">
-        <label>Correo electrónico<input name="email" type="email" autocomplete="username" required></label>
-        <label>Contraseña<input name="password" type="password" autocomplete="current-password" required></label>
-        <button>Entrar</button>
-      </form>
-    </section>
-    <div id="workspace" hidden>
-      <div class="intro"><div><p class="eyebrow">Administración del catálogo</p><h1>Captura de datos</h1><p>Los registros activos y disponibles alimentan las respuestas del chat.</p></div><button id="logout" class="secondary">Cerrar sesión</button></div>
-      <nav class="tabs" aria-label="Secciones"><button data-tab="developments" class="active">Desarrollos</button><button data-tab="properties">Propiedades</button><button data-tab="faqs">Preguntas frecuentes</button></nav>
-      <div class="grid"><section class="card"><h2 id="form-title"></h2><form id="record-form"></form></section><section class="card"><h2>Registros</h2><div id="records"></div></section></div>
-    </div>
-    <p id="feedback" role="status" aria-live="polite"></p>
-  </main>
-  <script type="module" src="/personal.js"></script>
-</body>
-</html>
+  <section id="login-panel" class="login-shell">
+    <div class="login-brand"><div class="brand-mark" aria-hidden="true">A</div><p class="eyebrow">Área privada</p><h1>Administra tu catálogo inmobiliario</h1><p>Registra desarrollos, propiedades y respuestas para mantener actualizada la información que recibe cada cliente.</p><ul class="benefits"><li><span>✓</span> Captura sencilla y ordenada</li><li><span>✓</span> Disponibilidad siempre al día</li><li><span>✓</span> Información centralizada</li></ul></div>
+    <div class="login-card"><p class="eyebrow">Bienvenido</p><h2>Inicia sesión</h2><p class="muted">Acceso exclusivo para administradores y agentes.</p><form id="login-form"><label>Correo electrónico<input name="email" type="email" placeholder="nombre@empresa.com" autocomplete="username" required></label><label>Contraseña<input name="password" type="password" placeholder="Tu contraseña" autocomplete="current-password" required></label><button class="primary wide">Entrar al panel <span>→</span></button></form><p class="login-help">¿No tienes acceso? Solicítalo al administrador principal.</p></div>
+  </section>
+  <div id="workspace" class="app-shell" hidden>
+    <aside class="sidebar"><div class="logo"><span class="brand-mark small">A</span><div><strong>Altura</strong><small>Administración</small></div></div><nav aria-label="Secciones del catálogo"><button data-tab="developments" class="nav-item active"><span class="nav-icon">▦</span><span>Desarrollos</span></button><button data-tab="properties" class="nav-item"><span class="nav-icon">⌂</span><span>Propiedades</span></button><button data-tab="faqs" class="nav-item"><span class="nav-icon">?</span><span>Preguntas frecuentes</span></button></nav><div class="sidebar-bottom"><a href="/" class="public-link">↗ Ver sitio público</a><button id="logout" class="logout">Cerrar sesión</button></div></aside>
+    <main class="content">
+      <header class="page-header"><div><p class="eyebrow">Catálogo inmobiliario</p><h1 id="page-title">Desarrollos</h1><p id="page-description" class="muted">Administra los desarrollos donde se encuentran tus propiedades.</p></div><button id="new-record" class="primary"><span>＋</span><span id="new-label">Nuevo desarrollo</span></button></header>
+      <section class="stats" aria-label="Resumen del catálogo"><article><span class="stat-icon green">▦</span><div><strong id="stat-developments">0</strong><small>Desarrollos</small></div></article><article><span class="stat-icon blue">⌂</span><div><strong id="stat-properties">0</strong><small>Propiedades</small></div></article><article><span class="stat-icon amber">●</span><div><strong id="stat-available">0</strong><small>Disponibles</small></div></article><article><span class="stat-icon violet">?</span><div><strong id="stat-faqs">0</strong><small>Respuestas activas</small></div></article></section>
+      <section class="panel list-panel"><div class="panel-heading"><div><h2 id="list-title">Desarrollos registrados</h2><p id="record-count" class="muted">0 registros</p></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Buscar desarrollo..."></label></div><div id="records" class="record-list"></div></section>
+    </main>
+    <div id="editor-backdrop" class="editor-backdrop" hidden></div><aside id="editor" class="editor" aria-labelledby="form-title" aria-hidden="true"><div class="editor-header"><div><p class="eyebrow">Captura de información</p><h2 id="form-title">Nuevo desarrollo</h2></div><button id="close-editor" class="icon-button" type="button" aria-label="Cerrar">×</button></div><p id="form-description" class="muted">Completa la información solicitada.</p><form id="record-form"></form></aside>
+  </div>
+  <div id="feedback" class="toast" role="status" aria-live="polite" hidden></div><script type="module" src="/personal.js"></script>
+</body></html>

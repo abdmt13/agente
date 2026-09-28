@@ -1,0 +1,29 @@
+/* Garantiza que las pantallas inactivas no sean visibles aunque tengan display propio. */
+[hidden] { display: none !important; }
+
+@keyframes loginExit {
+  to { opacity: 0; transform: scale(.985); filter: blur(3px); }
+}
+
+@keyframes workspaceEnter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-shell.leaving {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  width: 100%;
+  animation: loginExit .42s cubic-bezier(.4, 0, .2, 1) forwards;
+  pointer-events: none;
+}
+
+.app-shell.entering {
+  animation: workspaceEnter .5s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-shell.leaving,
+  .app-shell.entering { animation-duration: .01ms; }
+}

@@ -111,7 +111,7 @@ def create_app() -> FastAPI:
 
         @app.get("/{asset_name}", include_in_schema=False)
         async def serve_public_asset(asset_name: str):
-            if asset_name not in {"app.js", "styles.css", "personal.js", "personal.css"}:
+            if asset_name not in {"app.js", "styles.css", "personal.js", "personal.css", "transitions.css"}:
                 from fastapi import HTTPException
                 raise HTTPException(status_code=404)
             return FileResponse(os.path.join(public_dir, asset_name))
